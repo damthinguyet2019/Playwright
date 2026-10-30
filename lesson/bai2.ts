@@ -57,7 +57,7 @@ let transactions: ArrayTransaction[] = [
 
 // map lấy danh sách mã giao dịch trong object transactions
 //let transactionId = transactions.map(transaction=>transaction.transactionId);
-//console.log("Danh sách giao dịch: " + transactionIds);
+//console.log("Danh sách giao dịch: " + transactionId);
 
 //filter lấy các giao dịch SUCCESS
 
@@ -72,3 +72,5 @@ let transactions: ArrayTransaction[] = [
 
 let isHaveTransactionFail = transactions.filter(transaction=>transaction.status === "FAILED" && transaction.currency === "VND");
 console.log(isHaveTransactionFail[0]);
+
+let isHaveTransactionSuccess = transactions.filter(transaction=>transaction.status === "SUCCESS" && transaction.currency === "VND").map(transaction=>transaction.transactionId)
