@@ -72,5 +72,5 @@ let transactions: ArrayTransaction[] = [
 
 let isHaveTransactionFail = transactions.filter(transaction=>transaction.status === "FAILED" && transaction.currency === "VND");
 console.log(isHaveTransactionFail[0]);
-
+//cách gộp lấy ra success và VND
 let isHaveTransactionSuccess = transactions.filter(transaction=>transaction.status === "SUCCESS" && transaction.currency === "VND").map(transaction=>transaction.transactionId)
